@@ -1,17 +1,15 @@
+@import "_fonts.sass"
+    
 *, ::after, ::before
     margin: 0
     padding: 0
     box-sizing: border-box
-
     
 // Основые цвета
-$color-full-black: #000000
-$color-black: #0B0B0B
-$color-grey: #1E1E1E
-$color-white: #F8F8F8
-$color-green: #02FE0E
-$color-blue: #1619CE
-$color-sky-blue: #36B5FC
+$color-black: #050215
+$color-white: #FFFFFF
+$color-main: #B4977B
+$color-transparent: #E4D6C9
 
 @mixin button-reset 
     padding: 0
@@ -23,3 +21,22 @@ $color-sky-blue: #36B5FC
    
 @mixin input-reset
   all: unset
+
+html
+    font-size: 62.5%
+    font-family: "Barlow"
+    font-weight: 400
+    color: $color-black
+
+body
+    background-color: $color-white
+    font-size: 1.8rem
+
+a
+    text-decoration: none
+    color: $color-white
+    &:hover, &:visited
+        color: $color-white
+
+ul
+    list-style-type: none

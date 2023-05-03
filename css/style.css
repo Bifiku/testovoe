@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-SemiBold.ttf");
+  font-weight: 600;
+}
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Barlow";
+  font-weight: 400;
+  color: #050215;
+}
+
+body {
+  background-color: #FFFFFF;
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+a:hover, a:visited {
+  color: #FFFFFF;
+}
+
+ul {
+  list-style-type: none;
+}/*# sourceMappingURL=style.css.map */
