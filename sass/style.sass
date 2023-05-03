@@ -1,0 +1,25 @@
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+    
+// Основые цвета
+$color-full-black: #000000
+$color-black: #0B0B0B
+$color-grey: #1E1E1E
+$color-white: #F8F8F8
+$color-green: #02FE0E
+$color-blue: #1619CE
+$color-sky-blue: #36B5FC
+
+@mixin button-reset 
+    padding: 0
+    border: none
+    font: inherit
+    color: inherit
+    background-color: transparent
+    cursor: pointer
+   
+@mixin input-reset
+  all: unset
