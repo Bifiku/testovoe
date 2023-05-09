@@ -39,6 +39,237 @@ a:hover, a:visited {
   color: #FFFFFF;
 }
 
-ul {
+p {
+  color: #050215;
+  line-height: 3.2rem;
+}
+
+nav, .navigation, .contacts {
+  display: grid;
+}
+nav ul, .navigation ul, .contacts ul {
+  position: relative;
+  display: grid;
+  justify-content: start;
   list-style-type: none;
+  grid-auto-flow: column;
+  align-items: end;
+}
+nav ul li, .navigation ul li, .contacts ul li {
+  transition: 0.1s all;
+  cursor: pointer;
+}
+nav ul li:not(:last-child), .navigation ul li:not(:last-child), .contacts ul li:not(:last-child) {
+  margin-right: 5.9rem;
+}
+nav ul li:hover, .navigation ul li:hover, .contacts ul li:hover {
+  color: #B4977B;
+}
+
+h1 {
+  font-size: 6.4rem;
+  line-height: 7.7rem;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [scrollbar-start] 29.4rem [scrollbar-end empty-start-1] 16.4rem [empty-end-1 img-start] 51.7rem [img-end empty-start-2] 13.3rem [empty-end-2 content-start] 65rem [content-end];
+  grid-template-rows: 9rem 1fr 1fr 5rem;
+  max-width: 192rem;
+  height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.scrollbar {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: space-between;
+  grid-column: scrollbar-start/scrollbar-end;
+  grid-row: 1/-1;
+  height: 100%;
+  padding: 5.7rem 0 5rem 0;
+}
+.scrollbar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.2rem;
+  height: 100vh;
+  background-color: #E5E5E5;
+}
+.scrollbar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.2rem;
+  height: 100vh;
+  background-color: #E5E5E5;
+}
+
+.img {
+  position: relative;
+  z-index: 0;
+  height: 80rem;
+  display: grid;
+  grid-column: img-start/img-end;
+  grid-row: 1/3;
+  align-items: end;
+}
+.img__text {
+  position: absolute;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 11.7rem;
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.header {
+  display: grid;
+  grid-column: content-start/content-end;
+}
+
+.content {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+  grid-column: content-start/content-end;
+  grid-row: 2/3;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  align-items: end;
+  grid-column: img-start/content-end;
+  grid-row: 3/4;
+  grid-template-columns: 51.7rem 1fr;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.slider {
+  display: grid;
+  align-content: space-between;
+  justify-items: center;
+  height: 36rem;
+}
+.slider__number {
+  color: #B4977B;
+  font-size: 5.4rem;
+  font-weight: 500;
+}
+.slider__line {
+  width: 0.4rem;
+  height: 20rem;
+  background-color: #E5E5E5;
+  border-radius: 0.2rem;
+}
+.slider__line span {
+  transition: 0.3s all;
+  display: block;
+  position: relative;
+  top: 0;
+  background-color: #B4977B;
+  width: 100%;
+  height: 4rem;
+  border-radius: 0.2rem;
+}
+
+.btn {
+  color: #fff;
+  padding: 1.4rem 3.2rem;
+  background-color: #B4977B;
+  border-radius: 5rem;
+  line-height: 179.5%;
+}
+.btn__arrow {
+  padding: 0;
+  border: 0.2rem #B4977B solid;
+  border-radius: 5rem;
+  height: 7.9rem;
+  width: 5.8rem;
+  margin: 0 auto;
+  background: url("../icons/arrow.svg") center/30% no-repeat;
+  transition: 0.1s all;
+}
+.btn__arrow:hover {
+  background: #B4977B url("../icons/arrow-white.svg") center/30% no-repeat;
+}
+
+.color-transparent {
+  color: #E4D6C9;
+}
+
+.shopping-bag {
+  width: 2.8rem;
+  height: 2.8rem;
+  background: url("../icons/shopping-bag.svg") center/cover no-repeat;
+}
+
+.paragraph {
+  opacity: 0.75;
+}
+
+.contacts {
+  display: grid;
+  grid-column: 1/2;
+  justify-content: center;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.number-page {
+  position: absolute;
+  right: 0;
+  display: grid;
+  justify-content: end;
+  line-height: 17rem;
+  font-weight: 600;
+  font-size: 20rem;
+  color: transparent;
+  -webkit-text-stroke: 2px #B4977B;
+  text-stroke: 2px #B4977B;
+}
+
+.margin-bottom-40px {
+  margin-bottom: 4rem;
+}
+
+.position-right {
+  position: absolute;
+  right: 0;
+}
+
+.display-none {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
