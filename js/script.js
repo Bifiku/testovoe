@@ -6,15 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     btnSlider.addEventListener('click', () => {
-        const numberPage = document.querySelectorAll('.slider__number');
+        const sliderNumber = document.querySelectorAll('.slider__number');
         const sliderLine = document.querySelector('.slider__line');
         const sliderScroll = sliderLine.querySelector('span');
-        count++;  
-        if(count <= 6){
-            let widthScroll = 40;
-            numberPage[0].innerHTML = `0${count}`;
-            sliderScroll.style.top = `${widthScroll * count}px`;
+        const heightScroll = sliderScroll.getBoundingClientRect().height;
+        const heightSlider = sliderLine.getBoundingClientRect().height;
+        const numberPage = document.querySelector('.')
+        if(count < 6){       
+            sliderScroll.style.top = `${(heightSlider-heightScroll)/5 * count}px`;
+            count++;  
+            sliderNumber[0].innerHTML = `0${count}`;    
         }
+        
     });
     
 });
